@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 html {
     scroll-behavior: smooth;
@@ -48,6 +51,7 @@ html {
     column-count: 3;
     column-gap: 1rem;
 }
+
 .ourimages img {
     width: 100%;
     margin-bottom: 1rem;
