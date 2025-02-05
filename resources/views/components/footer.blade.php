@@ -2,7 +2,7 @@
   <div class="max-w-screen-lg mx-auto px-4 text-center">
     <div class="mb-6">
       <a href="/" class="text-2xl font-bold">
-        <span class="text-green-500">Bejo </span><span class="text-white">Bali Tour</span>
+        <span class="text-green-300">Bejo </span><span class="text-white">Bali Tour</span>
       </a>
     </div>
 
