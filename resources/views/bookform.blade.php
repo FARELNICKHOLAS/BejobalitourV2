@@ -13,7 +13,7 @@
 
 </head>
 <section id="booking-form" class="py-16 px-5" style="background-image: url('image/aboutusimage.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="max-w-screen-md mx-auto bg-gray-800 p-10 rounded-lg shadow-2xl">
+    <div class="max-w-screen-md mx-auto bg-gray-800 bg-opacity-70 p-10 rounded-lg shadow-2xl">
         <h2 class="text-4xl font-bold text-gray-800 text-center mb-8 text-white">Book Your <span class="text-green-300">Ride</span></h2>
         <form action="{{ route('tour-booking.store') }}" method="POST" class="space-y-6">
             @csrf
