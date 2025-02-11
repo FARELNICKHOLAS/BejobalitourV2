@@ -34,4 +34,4 @@ Route::post('/tour-booking', [BookController::class, 'store'])->name('tour-booki
 
 Route::get('/destination', [TourController::class, 'index'])->name('destination');
 
-Route::get('/destination/{slug}', [TourController::class, 'show'])->name('destination.show');    
+Route::get('/destination/{slug}', [TourController::class, 'show'])->name('showpackages');    

@@ -16,6 +16,6 @@ class TourController extends Controller
     public function show($slug)
     {
         $package = TourPackages::where('slug', $slug)->firstOrFail();
-        return view('destination.show', compact('package'));
+        return view('showpackages', compact('package'));
     }
 }

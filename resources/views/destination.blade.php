@@ -22,7 +22,7 @@
             <img src="{{ asset('storage/' . $package->image) }}" class="w-full h-40 object-cover rounded-lg mb-2">
             <h2 class="text-xl font-semibold">{{ $package->tourname }}</h2>
             <p class="text-gray-700">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
-            <a href="{{ route('destination.show', $package->slug) }}" class="text-blue-500">Lihat Detail</a>
+            <a href="{{ route('showpackages', $package->slug) }}" class="text-blue-500">Lihat Detail</a>
         </div>
         @endforeach
     </div>
