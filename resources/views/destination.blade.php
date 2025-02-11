@@ -14,11 +14,20 @@
 </head>
 <body class="relative pt-18 bg-gray-800">
     @include('components.navbar')
-    <div class="flex h-screen bg-gray-700 items-center">
-    <div class="text-center mx-auto text-white">
-      <a class="text-5xl font-semibold text-white group transition duration-300 ease-in-out hover:scale-105 hover:text-green-300" href="#aboutus">Explore Tour Destinations</a>
+<div class="container mx-auto px-4 py-6">
+    <h1 class="text-3xl font-bold mb-4">Paket Tour</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        @foreach($packages as $package)
+        <div class="border rounded-lg p-4 shadow-lg">
+            <img src="{{ asset('storage/' . $package->image) }}" class="w-full h-40 object-cover rounded-lg mb-2">
+            <h2 class="text-xl font-semibold">{{ $package->tourname }}</h2>
+            <p class="text-gray-700">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
+            <a href="{{ route('destination.show', $package->slug) }}" class="text-blue-500">Lihat Detail</a>
+        </div>
+        @endforeach
     </div>
-  </div>
+</div>
+
     @include('components.footer')
 </body>
 

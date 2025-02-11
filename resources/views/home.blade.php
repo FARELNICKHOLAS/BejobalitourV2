@@ -18,9 +18,9 @@
   <!-- Hero Section Starts -->
   <div class="flex items-center h-screen" style="background-image: url('image/bejohome.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="text-center mx-auto text-white">
-      <h1 class="text-6xl font-semibold"><a class="text-green-300">Bejo</a> Bali Tour <h1>
+      <h1 class="text-6xl font-medium"><a class="text-green-300">Bejo</a> Bali Tour <h1>
           <p class="font-light text-3xl mt-5">Explore Bali, Embrace Paradise</p>
-          <a class="px-10 py-4 inline-block text-xl border-2 border-white text-white bg-transparent rounded-full hover:bg-white hover:text-black transition-all duration-300 mt-10 transform hover:scale-105" href="#intro">Get Started</a>
+          <a class="px-10 py-4 inline-block text-xl border-2 border-green-300 text-white bg-transparent rounded-full hover:bg-green-300 hover:text-black transition-all duration-300 mt-10 transform hover:scale-105" href="#intro">Get Started</a>
     </div>
   </div>
   </section>
@@ -28,7 +28,7 @@
 
 
 <!-- Introduction Starts -->
-<section class="h-screen py-16 px-5 bg-gray-800 items-center flex flex-col" id="intro">
+<section class="py-16 px-5 bg-gray-800 items-center flex flex-col mt-15" id="intro">
   <div class="max-w-screen-lg mx-auto text-center">
     <h2 class="text-3xl font-semibold text-green-300">
       Discover a Seamless Travel Experience with Us!
@@ -54,7 +54,7 @@
 
 
   <!-- How to order Starts -->
-  <div class="bg-white py-16 px-4 sm:px-6 lg:px-8 ">
+  <div class="bg-gray-200 py-16 px-4 sm:px-6 lg:px-8 ">
   <div class="max-w-7xl mx-auto text-center">
     <h2 class="text-3xl font-bold text-gray-900 mb-7">How to Book Your Ride | Cara Memesan Kendaraan Anda</h2>
     
@@ -65,30 +65,30 @@
       </div>
   
       <div class="bg-gray-800 shadow-lg rounded-lg p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 transform">
-        <h3 class="text-xl font-bold text-green-500 mb-4">2. Complete Your Reservation</h3>
+        <h3 class="text-xl font-bold text-green-400 mb-4">2. Complete Your Reservation</h3>
         <p class="text-white mb-6">Fill in your booking details given, including your full name, email Adress, and any special requests.</p>
       </div>
       
       <div class="bg-gray-800 shadow-lg rounded-lg p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 transform">
-        <h3 class="text-xl font-bold text-yellow-500 mb-4">3. Confirmation & Payment</h3>
+        <h3 class="text-xl font-bold text-yellow-400 mb-4">3. Confirmation & Payment</h3>
         <p class="text-white mb-6">Review your reservation details that will given by our Customer Service, Make a payment, and confirm your booking.</p>
       </div>
       
       <div class="bg-gray-800 shadow-lg rounded-lg p-8 hover:scale-105 hover:shadow-2xl transition-all duration-300 transform">
-        <h3 class="text-xl font-bold text-orange-500 mb-4">4. Enjoy Your Ride</h3>
+        <h3 class="text-xl font-bold text-orange-400 mb-4">4. Enjoy Your Ride</h3>
         <p class="text-white mb-6">Arrive at the pick-up location, show your booking confirmation, and start your comfortable journey in Bali!</p>
       </div>
     </div>
   </div>
 </div>
-<div class="text-center bg-white">
+<div class="text-center bg-gray-200">
         <a class="bg-green-500 text-white px-8 py-5 rounded-lg shadow-md hover:bg-green-600 transition duration-300 font-semibold text-lg" href = "/bookform">
             Book Now
         </a>
     </div>
 <!-- How to order Ends -->
 
-<div class="h-16 bg-white"></div>
+<div class="h-16 bg-gray-200"></div>
 
 @include('components.footer')
 </body>

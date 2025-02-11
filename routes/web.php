@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\TourController;
 
 Route::get('/', function () {
     return view('home');
@@ -28,4 +29,9 @@ Route::get('/gallery',
     [GalleryController::class, 'index']);
 
 Route::get('/', [BookController::class, 'create'])->name('home');
+
 Route::post('/tour-booking', [BookController::class, 'store'])->name('tour-booking.store');
+
+Route::get('/destination', [TourController::class, 'index'])->name('destination');
+
+Route::get('/destination/{slug}', [TourController::class, 'show'])->name('destination.show');    
