@@ -72,3 +72,8 @@ html {
         column-count: 1;
     }
 }
+
+.swiper {
+  width: 100%;
+  padding: 20px 0;
+}

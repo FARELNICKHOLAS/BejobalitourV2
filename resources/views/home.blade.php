@@ -10,6 +10,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </head>
 
 <body class="pt-20">
@@ -28,26 +31,19 @@
 
 
 <!-- Introduction Starts -->
-<section class="py-16 px-5 bg-gray-800 items-center flex flex-col mt-15" id="intro">
-  <div class="max-w-screen-lg mx-auto text-center">
-    <h2 class="text-3xl font-semibold text-green-300">
-      Discover a Seamless Travel Experience with Us!
-    </h2>
-    <p class="mt-7 text-lg text-gray-600 text-white">
-      Bejobalitour is designed to offer a seamless and comfortable transportation experience in Bali. We focus on providing only 4-seater and 12-seater cars to cater to both small and larger groups. Whether you're exploring the island with a few friends or a larger group, you can rely on our well-maintained and spacious vehicles to get you to your destination safely and comfortably. With a user-friendly interface, booking your ride is just a tap away.
-    </p>
-    <p class="mt-7 text-lg text-gray-600 text-white">
-      Layanan Bejobalitour dibuat untuk memberikan kemudahan dalam perjalanan Anda di Bali. Kami hanya menyediakan kendaraan yang nyaman dan aman, dengan pilihan mobil berkapasitas 4 kursi dan 12 kursi. Apakah Anda bepergian sendirian, bersama pasangan, atau dalam rombongan keluarga dan teman, kami siap melayani dengan kendaraan terbaik untuk pengalaman perjalanan yang menyenangkan dan tanpa hambatan.
-    </p>
-  </div>
-
-  <div class="bg-gray-800 py-2 w-full overflow-hidden mt-40">
-    <div class="marquee-content text-green-300">
-      <span>Wonderful Bali Island • Wonderful Bali Island • Wonderful Bali Island •</span>
-      <span>Wonderful Bali Island • Wonderful Bali Island • Wonderful Bali Island •</span>
+<div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            @foreach ($packages as $package)
+                <div class="swiper-slide">
+                    <div class="bg-gray-800 rounded-lg p-4">
+                        <img src="{{ asset('image/' . $package->image) }}" alt="{{ $package->title }}" class="rounded-lg w-full h-48 object-cover">
+                        <h2 class="text-green-400 font-bold mt-2">{{ $package->title }}</h2>
+                        <p class="text-white">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
     </div>
-  </div>
-</section>
 <!-- Introduction Ends -->
 
 
@@ -94,3 +90,22 @@
 </body>
 
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 5000, // 5 seconds
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  });
+</script>
