@@ -15,12 +15,12 @@
 <body class="pt-20 bg-gray-700">
 @include('components.navbar')
 <div class="container mx-auto px-4 py-6">
-  <a href="{{ url('/destination') }}" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded-lg">Back</a>
-    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <img src="{{ asset('storage/' . $package->image) }}" class="w-full h-64 object-cover rounded-lg mb-4">
-        <h1 class="text-3xl font-bold">{{ $package->tourname }}</h1>
-        <p class="text-gray-600 text-lg mb-4">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
-        <p class="text-gray-800">{{ $package->description }}</p>
+  <a href="{{ url('/destination') }}" class="text-md font-semibold mt-4 inline-block bg-gray-500 text-white px-9 py-5 rounded-lg">Back</a>
+    <div class="max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+        <img src="{{ asset('image/' . $package->image) }}" class="w-full h-64 object-cover rounded-lg mb-4">
+        <h1 class="text-3xl font-bold text-green-300">{{ $package->tourname }}</h1>
+        <p class="text-gray-600 text-lg mb-4 text-white underline">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
+        <p class="text-white">{{ $package->description }}</p>
     </div>
 </div>
 </body>

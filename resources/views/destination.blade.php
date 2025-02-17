@@ -15,11 +15,11 @@
 <body class="relative pt-20 bg-gray-700">
     @include('components.navbar')
 <div class="container mx-auto px-4 py-6">
-    <h1 class="text-3xl font-bold mb-4 text-white">Our Tour Package Plans</h1>
+    <h1 class="text-3xl font-bold mb-4 text-white">Our Tour Package <span class="text-green-300">Plans</span></h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-5">
         @foreach($packages as $package)
         <div class="border rounded-lg p-4 shadow-lg">
-            <img src="{{ asset('storage/' . $package->image) }}" class="w-full h-40 object-cover rounded-lg mb-2">
+            <img src="{{ asset('image/' . $package->image) }}" class="w-full h-40 object-cover rounded-lg mb-2">
             <h2 class="text-xl font-semibold text-green-300">{{ $package->tourname }}</h2>
             <p class="text-white">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
             <a href="{{ route('showpackages', $package->slug) }}" class="text-green-300 font-semibold underline">Lihat Detail</a>
