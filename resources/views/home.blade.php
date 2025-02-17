@@ -31,26 +31,28 @@
 
 
 <!-- Introduction Starts -->
-<section class="py-16 px-5 mt-15 bg-gray-800 h-screen flex flex-col justify-center" id="intro">
+<section class="py-16 px-5 bg-gray-700 min-h-screen flex flex-col justify-center" id="intro">
     <div class="max-w-screen-lg mx-auto text-center">
-        <h2 class="text-4xl font-semibold text-white">
-            Discover a Seamless Travel Experience with Us!
+        <h2 class="text-5xl font-bold text-white leading-tight">
+            Discover a <span class="text-green-300">Seamless</span> Travel Experience with Us!
         </h2>
     </div>
 
-    <div class="swiper mySwiper mt-5">
+    <div class="swiper mySwiper mt-10">
         <div class="swiper-wrapper">
             @foreach ($packages as $package)
-                <div class="swiper-slide flex justify-center items-center pt-20">
-                    <div class="bg-gray-700 rounded-lg p-6 w-[90%] max-w-3xl h-[40vh] flex flex-col">
+                <div class="swiper-slide flex justify-center items-center pt-10">
+                    <div class="bg-gray-800 backdrop-blur-md bg-opacity-80 shadow-lg rounded-xl p-6 w-[90%] max-w-3xl h-[50vh] flex flex-col transform transition duration-300 hover:scale-105 hover:shadow-2xl">
                         <img src="{{ asset('image/' . $package->image) }}" alt="{{ $package->title }}" 
-                            class="rounded-lg w-full h-[60%] object-cover">
-                        <div class="flex-grow flex flex-col justify-between mt-4">
-                            <h2 class="text-green-400 font-bold text-2xl">{{ $package->title }}</h2>
-                            <h2 class="text-xl font-semibold text-green-300">{{ $package->tourname }}</h2>
-                            <p class="text-white text-lg">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
+                            class="rounded-lg w-full h-[60%] object-cover shadow-md">
+                        <div class="flex-grow flex flex-col justify-between mt-4 text-center">
+                            <h2 class="text-green-400 font-bold text-3xl">{{ $package->title }}</h2>
+                            <h3 class="text-xl font-semibold text-green-300">{{ $package->tourname }}</h3>
+                            <p class="text-white text-lg font-medium">Rp {{ number_format($package->price, 0, ',', '.') }}</p>
                             <a href="{{ route('showpackages', $package->slug) }}" 
-                               class="text-green-300 font-semibold underline text-lg">Lihat Detail</a>
+                               class="mt-4 mb-4 bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-300 transition-all duration-300 inline-block w-2/3 mx-auto text-lg font-semibold">
+                                Lihat Detail
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -58,6 +60,7 @@
         </div>
     </div>
 </section>
+
 <!-- Introduction Ends -->
 
 
